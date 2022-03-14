@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Call() method</title>
+</head>
+<body style="text-align: center;">
+	<h1 style="color: green">geeks for geeks</h1>
+	<button onclick="fun()">click</button>
+	<p id="GFG"></p>
+	<script>
+		function fun(){
+			let p = {
+				fullName: function(addr1, addr2){
+					return this.fName + " " + this.lName +"," + addr1 +"," +addr2;
+				}
+			}
+			let p1 = {
+				fName:"GFGName",
+				lName: "GFGName",
+			}
+			let x = p.fullName.call(p1, "India","USA");
+			document.getElementById("GFG").innerHTML = x;
+		}
+	</script>  
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>counter button</title>
+	 <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <style>
+   	div {
+   		width: 20%;
+   		margin: auto;
+   	}
+   	input, button{
+   		display: inline-block;
+   		padding: 10px
+   	}
+   </style>
+</head>
+
+<body>
+	<div>
+		<button id="subtract"></button>
+		<input type="number" value="0">
+		<button id="add"></button>
+	</div>
+	<script>
+		let btnAdd = document.querySelector('#add');
+		let btnSubtract = document.querySelector('#subtract');
+		let input = document.querySelector('input');
+
+		btnAdd.addEventListener('click', () =>{
+			input.value = parseInt(input.value) + 1;
+		});
+
+		btnSubstract.addEventListener('click', () =>{
+			input.value = parseInt(input.value) -1;
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button type="button"
+	onclick="document.getElementById('date_time_button').innerHTML = Date()">
+		click and see Date and Time
+	</button>
+	<p id="date_time_button"></p>
+	<script>
+		function time(){
+			var currentdate = new Date();
+			var timenow = + currentdate.gatHours() + ":"
+			            + currentdate.getMinutes() + ":"
+			            + currentdate.getSeconds();
+			document.getElementById("date_time_button").innerHTML = " "+timenow;            
+		}
+	</script>
+
+</body>
+</html>
